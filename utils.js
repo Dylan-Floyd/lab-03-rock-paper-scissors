@@ -32,5 +32,12 @@ export function didUserWin(userObjectName, computerObjectName) {
 }
 
 export function getRandomObject() {
-
+    let num = Math.floor(Math.random() * 3);
+    if (num === 0) {
+        return 'rock';
+    }
+    if (num === 1) {
+        return 'paper';
+    }
+    return 'scissors';
 }

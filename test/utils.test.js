@@ -58,3 +58,42 @@ test('Scissors draws to scissors', assert => {
 });
 
 //TODO: getRandomObject tests
+test('3000 getRandomObject() calls returns roughly equal distribution of objectNames', assert => {
+    let rockCount = 0;
+    let paperCount = 0;
+    let scissorsCount = 0;
+    for (let i = 0; i < 3000; i++) {
+        let result = getRandomObject();
+        if (result === 'rock') {
+            rockCount++;
+        }
+        if (result === 'paper') {
+            paperCount++;
+        }
+        if (result === 'scissors') {
+            scissorsCount++;
+        }
+    }
+    let evenlyDistributed =
+            rockCount > 900 &&
+            rockCount < 1100 &&
+            paperCount > 900 &&
+            paperCount < 1100 &&
+            scissorsCount > 900 &&
+            scissorsCount < 1100;
+    assert.equal(evenlyDistributed, true);
+});
+
+test('3000 getRandomObject() calls only returns "rock", "paper" or "scissors"', assert => {
+    let wereInvalidValuesReturned = false;
+    for (let i = 0; i < 3000; i++) {
+        let randomObject = getRandomObject();
+        if (randomObject !== 'rock' &&
+                randomObject !== 'paper' &&
+                randomObject !== 'scissors') {
+            wereInvalidValuesReturned = true;
+            break;
+        }
+    }
+    assert.equal(wereInvalidValuesReturned, false);
+});

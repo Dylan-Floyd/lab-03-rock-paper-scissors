@@ -21,7 +21,7 @@
     <main>
         <section class="main-section">
             <h1>Rock Paper Scissors</h1>
-            <p>How to play: Pick rock, paper or scissors and hit play. The computer will then pick an object and the winner will be determined as follows:</p>
+            <p>How to play: Pick rock, paper or scissors and click play. The computer will then pick an object and the winner will be determined as follows:</p>
             <ul>
                 <li>Rock beats scissors.</li>
                 <li>Scissors beats paper.</li>
@@ -29,21 +29,38 @@
             </ul>
             <p>If you and the computer pick the same object, it will count as a draw.</p>
             <div class="column-div some-white-space">
-                <h1 class="hidden">Win!</h1>
+                <h1 id="result-h1" class="hidden">Win!</h1>
                 <div>
                     <span id="wins-span">Wins: 0</span> <span id="losses-span">Losses: 0</span>
                 </div>
-                <div>
-                    <input type="radio" name="object" value="rock">Rock
+                <div class="row-div">
+                    <div class="column-div narrow-div some-white-space user-radio-buttons">
+                        <h3>Your pick:</h3>
+                        <div>
+                            <input type="radio" name="object" value="rock" class="user-radio-button">Rock
+                        </div>
+                        <div>
+                            <input type="radio" name="object" value="paper" class="user-radio-button">Paper
+                        </div>
+                        <div>
+                            <input type="radio" name="object" value="scissors" class="user-radio-button">Scissors
+                        </div>
+                    </div>
+                    <div class="column-div narrow-div some-white-space computer-radio-buttons">
+                        <h3>Computers pick:</h3>
+                        <div>
+                            <input type="radio" name="comp-object" value="rock" disabled id="computer-rock">Rock
+                        </div>
+                        <div>
+                            <input type="radio" name="comp-object" value="paper" disabled id="computer-paper">Paper
+                        </div>
+                        <div>
+                            <input type="radio" name="comp-object" value="scissors" disabled id="computer-scissors">Scissors
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <input type="radio" name="object" value="paper">Paper
-                </div>
-                <div>
-                    <input type="radio" name="object" value="scissors">Scissors
-                </div>    
-                <div id="buttons-div">
-                    <button id="submit">Submit</button>
+                <div id="buttons-div"> 
+                    <button id="play">Play</button>
                     <button id="reset">Reset</button>
                 </div>
             </div>
