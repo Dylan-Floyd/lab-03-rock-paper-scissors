@@ -24,9 +24,6 @@ function initializeGame() {
 
 initializeGame();
 
-function getUserObjectName() {
-    return document.querySelector('.user-radio-buttons>div>input:checked').value;
-}
 
 function getResultString(result) {
     if (result === 'win') {
@@ -62,7 +59,11 @@ function showResult(result) {
     // use user input to update state 
     // update DOM to reflect the new state
 playButton.addEventListener('click', () => {
-    let result = didUserWin(getUserObjectName(), computerObjectName);
+    let usersPick = document.querySelector('.user-radio-buttons>div>input:checked');
+    if (usersPick === null) {
+        return;
+    }
+    let result = didUserWin(usersPick.value, computerObjectName);
     if (result === 'win') {
         wins++;
     } else if (result === 'lose') {
