@@ -1,1 +1,20 @@
 /* add home page styles here */
+h1, p, ul {
+    margin: 5px;
+}
+
+.some-white-space {
+    margin: 10px;
+    padding: 10px;
+}
+
+.column-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style:disc
+}
