@@ -1,1 +1,35 @@
 /* add home page styles here */
+h1, h3, p, ul {
+    margin: 5px;
+}
+
+.some-white-space {
+    margin: 10px;
+    padding: 10px;
+}
+
+.column-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.narrow-div {
+    width: auto;
+}
+
+ul {
+    list-style:disc
+}
+
+.hidden {
+    visibility: hidden;
+}

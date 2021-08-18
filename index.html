@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 
 <body>
@@ -20,47 +20,50 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+            <h1>Rock Paper Scissors</h1>
+            <p>How to play: Pick rock, paper or scissors and click play. The computer will then pick an object and the winner will be determined as follows:</p>
+            <ul>
+                <li>Rock beats scissors.</li>
+                <li>Scissors beats paper.</li>
+                <li>Paper beats rock.</li>
+            </ul>
+            <p>If you and the computer pick the same object, it will count as a draw.</p>
+            <div class="column-div some-white-space">
+                <h1 id="result-h1" class="hidden">Win!</h1>
+                <div>
+                    <span id="wins-span">Wins: 0</span> <span id="losses-span">Losses: 0</span>
+                </div>
+                <div class="row-div">
+                    <div class="column-div narrow-div some-white-space user-radio-buttons">
+                        <h3>Your pick:</h3>
+                        <div>
+                            <input type="radio" name="object" value="rock" class="user-radio-button">Rock
+                        </div>
+                        <div>
+                            <input type="radio" name="object" value="paper" class="user-radio-button">Paper
+                        </div>
+                        <div>
+                            <input type="radio" name="object" value="scissors" class="user-radio-button">Scissors
+                        </div>
+                    </div>
+                    <div class="column-div narrow-div some-white-space computer-radio-buttons">
+                        <h3>Computers pick:</h3>
+                        <div>
+                            <input type="radio" name="comp-object" value="rock" disabled id="computer-rock">Rock
+                        </div>
+                        <div>
+                            <input type="radio" name="comp-object" value="paper" disabled id="computer-paper">Paper
+                        </div>
+                        <div>
+                            <input type="radio" name="comp-object" value="scissors" disabled id="computer-scissors">Scissors
+                        </div>
+                    </div>
+                </div>
+                <div id="buttons-div"> 
+                    <button id="play">Play</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
