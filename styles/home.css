@@ -18,3 +18,7 @@ h1, p, ul {
 ul {
     list-style:disc
 }
+
+.hidden {
+    visibility: hidden;
+}
