@@ -57,7 +57,7 @@ test('Scissors draws to scissors', assert => {
     assert.equal(actual, expected);
 });
 
-//TODO: getRandomObject tests
+//getRandomObject tests
 test('3000 getRandomObject() calls returns roughly equal distribution of objectNames', assert => {
     let rockCount = 0;
     let paperCount = 0;
