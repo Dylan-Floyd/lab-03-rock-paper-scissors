@@ -59,7 +59,7 @@ function showResult(result) {
     // use user input to update state 
     // update DOM to reflect the new state
 playButton.addEventListener('click', () => {
-    let usersPick = document.querySelector('.user-radio-buttons>div>input:checked');
+    let usersPick = document.querySelector('.user-radio-buttons>label>input:checked');
     if (usersPick === null) {
         return;
     }
