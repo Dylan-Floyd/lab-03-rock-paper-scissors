@@ -35,8 +35,8 @@ header {
 }
 
 @keyframes spin {
-    from { transform: scale3d(2,2,1) rotateZ(0deg);  }
-    to { transform: scale3d(2,2,1) rotateZ(360deg); }
+    from { transform: scale3d(3,3,1) rotateZ(0deg);  }
+    to { transform: scale3d(3,3,1) rotateZ(360deg); }
 }
 
 .main-section {
@@ -76,4 +76,36 @@ ul {
 
 .hidden {
     visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+.object-label {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 200px;
+    width: 170px;
+    background-image: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .8), rgba(255, 255, 255, .8), rgba(255, 255, 255, .6));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.object-img {
+    width: 150px;
+    padding: -5px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + img {
+    padding: -5px;
+    border: 3px solid limegreen;
+    box-sizing: content-box;
 }
