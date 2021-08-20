@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { didUserWin, getRandomObject } from './utils.js';
+import { didUserWin, getRandomObject, getResultString } from './utils.js';
 
 const resultH1 = document.getElementById('result-h1');
 const winsSpan = document.getElementById('wins-span');
@@ -23,17 +23,6 @@ function initializeGame() {
 }
 
 initializeGame();
-
-
-function getResultString(result) {
-    if (result === 'win') {
-        return 'You won!';
-    } else if (result === 'draw') {
-        return 'It\'s a draw!';
-    } else {
-        return 'You lost!';
-    }
-}
 
 function showComputersPick(computerObjectName) {
     if (computerObjectName === 'rock') {

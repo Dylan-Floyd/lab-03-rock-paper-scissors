@@ -97,7 +97,7 @@ ul {
 
 .object-img {
     width: 150px;
-    padding: -5px;
+    padding: 0px;
 }
 
 input {
@@ -105,7 +105,7 @@ input {
 }
 
 input:checked + img {
-    padding: -5px;
+    padding: 0px;
     border: 3px solid limegreen;
     box-sizing: content-box;
 }
