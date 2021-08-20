@@ -41,3 +41,13 @@ export function getRandomObject() {
     }
     return 'scissors';
 }
+
+export function getResultString(result) {
+    if (result === 'win') {
+        return 'You won!';
+    } else if (result === 'draw') {
+        return 'It\'s a draw!';
+    } else {
+        return 'You lost!';
+    }
+}
